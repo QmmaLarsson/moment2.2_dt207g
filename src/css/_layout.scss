@@ -1,0 +1,16 @@
+@use "base";
+@use "component";
+
+/*Regler för hela webbplatsen*/
+html {
+    /*62,5% av 16px ger 10px*/
+    font-size: 62.5%;
+}
+
+body {
+    /*Textstorlek 16px som standard*/
+    font-size: base.$main-fontsize;
+    line-height: 1.5;
+    font-family: base.$font-stack;
+    margin: 0;
+}
