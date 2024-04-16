@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lägg till jobb</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+    <script src="js/form.js" type="module"></script>
+</head>
+
+<body>
+
+    <nav id="huvudmeny">
+
+        <!-- En knapp för att stänga menyn på mindre skärmar -->
+        <button id="closemenu" class="button">
+            <span>X</span>
+            <span>STÄNG</span>
+        </button>
+
+        <ul>
+            <li><a href="index.html">STARTSIDA</a></li>
+            <li><a href="add.html">LÄGG TILL JOBB</a></li>
+            <li><a href="about.html">OM</a></li>
+        </ul>
+
+    </nav>
+
+    <h1>Lägg till jobb</h1>
+
+    <form id="jobForm">
+        <label for="companyname"><strong>Företagsnamn:</strong></label>
+        <br>
+        <input type="text" id="companyname" name="companyname" required>
+        <br><br>
+        <label for="jobtitle"><strong>Titel:</strong></label>
+        <br>
+        <input type="text" id="jobtitle" name="jobtitle" required>
+        <br><br>
+        <label for="location"><strong>Plats:</strong></label>
+        <br>
+        <input type="text" id="location" name="location" required>
+        <br><br>
+        <label for="startdate"><strong>Startdatum:</strong></label>
+        <br>
+        <input type="date" id="startdate" name="startdate" required>
+        <br><br>
+        <label for="enddate"><strong>Slutdatum:</strong></label>
+        <br>
+        <input type="date" id="enddate" name="enddate">
+        <br><br>
+        <button id="submit" type="submit">Spara jobb</button>
+        <button type="reset">Rensa formulär</button>
+    </form>
+
+</body>
+
+</html>
