@@ -183,7 +183,7 @@ footer {
     background-color: base.$darkgreen;
     box-shadow: base.$primary-shadow;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
     padding-top: 10px;
     padding-bottom: 30px;
 }
@@ -235,8 +235,19 @@ input {
     @extend .button;
 }
 
+#formTextElement {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 900px) {
     form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #formTextElement {
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -261,4 +272,5 @@ input {
         margin-right: 10%;
     }
 }
+
 /*Slut på regler för sidan "Om*/

@@ -18,10 +18,20 @@ async function handleSubmit(event) {
     const startDate = document.getElementById("startdate").value;
     const endDate = document.getElementById("enddate").value;
 
+    if (!companyName.trim() || !jobTitle.trim() || !location.trim() || !startDate.trim()) {
+        alert("Fyll i alla obligatoriska fält")
+        return;
+    }
+
     await addJob(companyName, jobTitle, location, startDate, endDate);
 
     //Återställ formuläret
-    form.reset();
+    document.getElementById("companyname").value = "";
+    document.getElementById("jobtitle").value = "";
+    document.getElementById("location").value = "";
+    document.getElementById("startdate").value = "";
+    document.getElementById("enddate").value = "";
+
 }
 
 //Funktion för att lägga till information till APIet
