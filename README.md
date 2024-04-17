@@ -1,4 +1,4 @@
-# Labbgrund till Moment 2.2 i kursen DT207G, Backend-baserad webbutveckling
+# Moment 2.2 i kursen DT207G, Backend-baserad webbutveckling
 **Namn:** Emma Larsson\
 **Student-ID:** emla2309
 
