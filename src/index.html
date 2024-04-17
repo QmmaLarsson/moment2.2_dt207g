@@ -8,29 +8,46 @@
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
     <script src="js/list.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <nav id="huvudmeny">
+    <header>
 
-        <!-- En knapp för att stänga menyn på mindre skärmar -->
-        <button id="closemenu" class="button">
-            <span>X</span>
-            <span>STÄNG</span>
+        <!-- En knapp för att öppna meny på mindre skärmar -->
+        <button id="openmenu" class="button" type="button">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span>
+                <br>MENY
+            </span>
         </button>
 
-        <ul>
-            <li><a href="index.html">STARTSIDA</a></li>
-            <li><a href="add.html">LÄGG TILL JOBB</a></li>
-            <li><a href="about.html">OM</a></li>
-        </ul>
+        <nav id="huvudmeny">
 
-    </nav>
+            <!-- En knapp för att stänga menyn på mindre skärmar -->
+            <button id="closemenu" class="button" type="button">
+                <span>X</span>
+                <span>STÄNG</span>
+            </button>
 
-    <h1>Jobb</h1>
+            <ul>
+                <li><a href="index.html">STARTSIDA</a></li>
+                <li><a href="add.html">LÄGG TILL JOBB</a></li>
+                <li><a href="about.html">OM</a></li>
+            </ul>
 
-    <div class="jobContainer"></div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Jobb</h1>
+
+        <div class="jobContainer"></div>
+
+    </main>
 
 </body>
 

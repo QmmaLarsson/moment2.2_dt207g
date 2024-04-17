@@ -13,4 +13,153 @@ body {
     line-height: 1.5;
     font-family: base.$font-stack;
     margin: 0;
+    min-height: 100vh;
+    background-color: base.$primary-bg;
 }
+
+h1 {
+    /*Textstorlek 32px som standard*/
+    @include component.heading-size(1);
+    @extend .h;
+}
+
+h2 {
+    /*Textstorlek 24 som standard*/
+    @include component.heading-size(2);
+    @extend .h;
+}
+
+h3 {
+    /*Textstorlek 20 som standard*/
+    @include component.heading-size(3);
+    @extend .h;
+}
+
+main {
+    padding-top: 100px;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% 85%;
+    background-color: base.$darkgreen;
+    box-shadow: base.$primary-shadow;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+
+/*Regler för huvudmeny*/
+#huvudmeny {
+    grid-area: 1/2/2/4;
+    text-align: right;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: inline-block;
+        background-color: base.$primary-bg;
+        color: base.$black;
+        text-decoration: none;
+        padding: 25px;
+        margin-right: 5px;
+    }
+
+    a:hover {
+        background-color: base.$bg-complement;
+    }
+
+    #closemenu {
+        /*Knappen visas inte i ursprungsläget*/
+        display: none;
+        width: 100%;
+        text-align: left;
+        background-color: base.$primary-bg;
+        padding: 30px;
+        border-style: none;
+        @extend .button;
+    }
+}
+
+#openmenu {
+    /*Knappen visas inte i ursprungsläget*/
+    display: none;
+    width: 100%;
+    height: 100px;
+    background-color: base.$primary-bg;
+    border-color: base.$darkgreen;
+    border-width: 5px;
+    border-style: solid;
+    @extend .button;
+}
+
+/*Regler för skärmstorlekar med en maxbredd på 900px. Huvudmenyn blir annorlunda. Det blir en meny som ligger till höger på sidan och som täcker hela fönstrets view height. 
+Länkarna ligger i en lista istället för på rad.*/
+@media screen and (max-width: 900px) {
+    header {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    #huvudmeny {
+        /*Menyn visas inte i startläget. För att menyn ska visas måste man klicka på "Meny"-knappen. Denna funktion skapas med hjälp av 
+        JavaScript.*/
+        display: none;
+        background-color: base.$primary-bg;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        text-align: left;
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            display: block;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 30px;
+        }
+
+        #closemenu {
+            /*Knappen visas*/
+            display: block;
+        }
+
+        #closemenu:hover {
+            background-color: base.$bg-complement;
+        }
+    }
+
+    #openmenu {
+        /*Knappen visas*/
+        display: block;
+        grid-area: 1/3/2/4;
+    }
+
+    #openmenu:hover {
+        background-color: base.$bg-complement;
+    }
+}
+
+/*Slut på regler för huvudmeny*/
+/*Slut på regler för hela webbplatsen*/

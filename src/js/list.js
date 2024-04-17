@@ -35,7 +35,7 @@ function displayJobs(jobs) {
         <p><strong>Plats:</strong> ${job.location}</p>
         <p><strong>Startdatum</strong> ${job.startdate}</p>
         <p><strong>Slutdatum:</strong> ${endDateText}</p>
-        <button class="deleteBtn">Ta bort</button>
+        <button class="deleteBtn" type="button">Ta bort</button>
 `;
 
         // Lägg till jobbets ID som ett data-attribut
