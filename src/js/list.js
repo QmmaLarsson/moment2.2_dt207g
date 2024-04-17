@@ -21,6 +21,9 @@ function displayJobs(jobs) {
     jobs.forEach(job => {
         const jobElement = document.createElement("div");
 
+        //Lägg till en klass till varje element
+        jobElement.classList.add("jobElement");
+
         //IF-sats som kollar om endDate är definierat eller null
         let endDateText;
         if (job.enddate === null) {
@@ -30,7 +33,7 @@ function displayJobs(jobs) {
         }
 
         jobElement.innerHTML = `
-        <p><strong>Företag:</strong> ${job.companyname}</p>
+        <p><strong>Företagsnamn:</strong> ${job.companyname}</p>
         <p><strong>Titel:</strong> ${job.jobtitle}</p>
         <p><strong>Plats:</strong> ${job.location}</p>
         <p><strong>Startdatum</strong> ${job.startdate}</p>
